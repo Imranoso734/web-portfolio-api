@@ -25,14 +25,14 @@ app.get('/post', function (request, reply) {
                 email: faker_1.faker.internet.email(),
             },
         });
-        console.log(user);
+        // console.log(user);
         reply.send(user);
     });
 });
 app.get('/', function (request, reply) {
     return __awaiter(this, void 0, void 0, function* () {
         const users = yield prisma.user.findMany();
-        console.log(users);
+        // console.log(users);
         reply.send(users);
     });
 });
